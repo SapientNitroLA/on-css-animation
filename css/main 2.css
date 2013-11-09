@@ -1,0 +1,184 @@
+/* Reset Styles
+***********************/
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed,figure, figcaption, footer, header, hgroup,menu, nav, output, ruby, section, summary,time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+
+@import url(http://fonts.googleapis.com/css?family=Lekton:400,700);
+body {
+	font-family: 'Lekton', Courier, sans-serif;
+	color: #000;
+	font-size:95%;
+	background: #f9f9f9;
+}
+
+b, dt {
+	font-family:'Lekton', Courier, sans-serif;
+	font-weight:700;
+}
+
+i {
+  font-style:italic;
+}
+dl {
+  margin:20px 0px;
+}
+dt {
+  display:inline-block;
+  float:left;
+}
+dd {
+  padding-left:250px;
+  margin-bottom:10px;
+}
+textarea {
+  width:300px;
+  height:200px;
+}
+div.info {
+  padding: 20px;
+}
+div.experiment {
+	position:relative;
+	display:block;
+	width:1000px;
+	height:300px;
+	background:#eee url(http://tympanus.net/Tutorials/PseudoElementsImageCaptions/images/4.jpg) 10px 0px no-repeat;
+	border-bottom:5px solid #000;
+}
+
+.experiment p {
+	padding:2px 20px;
+}
+div.styling {
+	position:absolute;
+	padding:20px;
+	left:300px;
+	height:300px;
+}
+
+.experiment img {
+	position:absolute;
+	display:inline-block;
+	opacity: 1;
+}
+#transition-1 img:hover{
+	-webkit-transition: opacity 2s ease;
+	-moz-transition: opacity 2s ease;
+	-o-transition: opacity 2s ease;
+	-ms-transition: opacity 2s ease;    
+	transition: opacity 2s ease;
+  
+	opacity:0;
+}
+ 
+#transition-1 img {
+	
+}
+#transition-2 img {
+	opacity:.8;
+  border:2px solid blue;
+  
+  -webkit-transform:rotateZ(30deg);
+}
+
+#transition-3 img {
+	opacity:.8;
+  border:2px solid blue;
+  
+  -webkit-transform:skewX(30deg);
+}
+
+#transition-4 img {
+	opacity:.8;
+  border:2px solid blue;
+  
+  -webkit-transform:translate(100px, 5%);
+}
+
+
+/**, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+a img {
+    border: none;
+}
+
+.caption {
+    -webkit-backface-visibility: hidden; 
+	display: inline-block;
+	position: relative;
+	margin: 10px;
+	overflow: hidden;
+	background: #000;
+}
+
+.caption img {
+	display: block;
+	max-width: 100%;
+	-webkit-transition: opacity 0.3s ease-in-out;
+	-moz-transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.caption:hover img {
+	opacity: 0.5;
+}
+
+.caption::after,
+.caption::before {
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	color: #fff;
+    z-index: 1;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out; 
+	-moz-transition: -moz-transform 0.3s ease-in-out; 
+	transition: transform 0.3s ease-in-out; 
+}
+
+.caption::after {
+	content: attr(data-title);
+	top: 0;
+	background: #0083ab;
+	font-size: 40px;
+	font-weight: 300;
+	padding: 30px;
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+.caption::before {
+	content: '...' attr(data-description) '...';
+	top: 50%;
+	background: #000;
+	font-size: 14px;
+	padding: 20px;
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	transform: translateY(100%);
+}
+
+.caption:hover::after,
+.caption:hover::before {
+	-webkit-transform: translateY(0%);
+	-moz-transform: translateY(0%);
+	transform: translateY(0%);
+}
+*/
+/*	<a class="caption" href="http://cargocollective.com/jaimemartinez/Illustration" data-title="Vulture" data-description="I felt compelled to walk on and find the place of these sounds, and when the forest did clear I was standing on a hill. Before me, there was a great plain. Upon it, the armies of the world, standing, waiting.">
+		<img src="http://tympanus.net/Tutorials/PseudoElementsImageCaptions/images/3.jpg" alt="Illustration of Vulture"/>
+	</a>
+*/

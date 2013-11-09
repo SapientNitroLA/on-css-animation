@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>CSS Transitions and Animations</title>
+	
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
+	
+  
+</head>
+<body>
+<div class="nav">
+  <ul class="nav-main">
+    <li>
+      <a href="#transform">Transform</a>
+    </li>
+    <li>
+      <a href="#transition">Transition</a>
+    </li>
+    <li>
+      <a href="#animation">Animation</a>
+    </li>    
+  </ul>    
+</div>
+<div class="content">
+  <a name="transform" class="spacer"></a>
+  <h2>Transform</h2>
+  <ol>
+    <li><a href="#translate">translate </a></li>
+    <li><a href="#skew">skew </a></li>
+    <li><a href="#scale">scale </a></li>
+    <li><a href="#rotate">rotate </a></li>
+    <li><a href="#perspective">perspective </a></li>
+    <li><a href="#matrix">matrix </a></li>
+    <li><a href="#3D">3D </a></li>
+  </ol><a name="translate" class="spacer"></a>
+  <dl>
+    <dt>translate</dt>
+      <dd>
+        <div class="playground">
+          <textarea>none</textarea>
+          <img src="img/1.png">
+        </div>
+        <div class="playground">
+          <textarea>translate:(12px, 50%);</textarea>
+          <img src="img/1.png" class="translate-1">
+        </div>
+        <div class="playground">
+          <textarea>translateX(40px);</textarea>
+          <img src="img/1.png" class="translate-2">
+        </div>
+        <div class="playground">
+          <textarea>translateY(60px);</textarea>
+          <img src="img/1.png" class="translate-3">
+        </div>
+      </dd>
+      <dd>Specifies a 2D translation by vector [tx, ty]</dd>
+      <dd>
+        <dl>
+          <dt>translate(tx[, ty]);</dt>
+          <dd>if ty isn't specified, its value is assumed zero</dd>
+          <dt>translateX(ax)</dt>
+          <dd>translates amount along X axis</dd>
+          <dt>translateY(ay)</dt>
+          <dd>translates amount along Y axis</dd>
+        </dl>
+      </dd><a name="skew" class="spacer"></a>
+    <dt>skew</dt>
+      <dd>
+        <div class="playground">
+          <textarea>none</textarea>
+          <img src="img/2.png">
+        </div>
+        <div class="playground">
+          <textarea>skew(5deg, -10deg)</textarea>
+          <img src="img/2.png" class="skew-1">
+        </div>
+        <div class="playground">
+          <textarea>skewX(10deg);</textarea>
+          <img src="img/2.png" class="skew-2">
+        </div>
+        <div class="playground">
+          <textarea>skewY(10deg);</textarea>
+          <img src="img/2.png" class="skew-3">
+        </div>
+      </dd>
+      <dd>Specifies a 2D translation by vector [tx, ty]</dd>
+      <dd>
+        <dl>
+          <dt>skew(ax[, ay]);</dt>
+          <dd>if ay isn't specified, no skew happens on the Y axis</dd>
+          <dt>skewX(angle)</dt>
+          <dd>skews amount along X axis by given angle</dd>
+          <dt>skewY(angle)</dt>
+          <dd>skews amount along Y axis by given angle</dd>
+        </dl>
+      </dd><a name="scale" class="spacer"></a>
+    <dt>scale</dt>
+      <dd>
+        <div class="playground">
+           <textarea>none</textarea>
+           <img src="img/3.png">
+          </div>
+         <div class="playground">
+           <textarea>scale(.3, 1.15);</textarea>
+           <img src="img/3.png" class="scale-1">
+         </div>
+         <div class="playground">
+           <textarea>scaleX(2);</textarea>
+            <img src="img/3.png" class="scale-2">
+         </div>
+         <div class="playground">
+           <textarea>scaleY(.5);</textarea>
+          <img src="img/3.png" class="scale-3">
+         </div>
+       </dd>
+       <dd>Specifies a 2D scaling operation with a unitless number</dd>
+       <dd>
+         <dl>
+           <dt>scale(sx[, sy]);</dt>
+           <dd>if sy isn't specified, no scaling happens on the Y axis'</dd>
+          <dt>scaleX(sx)</dt>
+           <dd>skews amount along X axis by given angle</dd>
+           <dt>scaleY(sy)</dt>
+           <dd>skews amount along Y axis by given angle</dd>
+        </dl>
+      </dd><a name="rotate" class="spacer"></a>
+    <dt>rotate</dt>
+      <dd>
+        <div class="playground">
+           <textarea>none</textarea>
+           <img src="img/1.png">
+          </div>
+         <div class="playground">
+           <textarea>rotate(15deg);</textarea>
+           <img src="img/1.png" class="rotate-1">
+         </div>
+       </dd>
+       <dd>Rotates element clockwise around its origin by the specified angle</dd>
+       <dd>
+         <dl>
+           <dt>rotate(angle)</dt>
+           <dd>can be negative</dd>
+         </dl>
+       </dd><a name="perspective" class="spacer"></a>
+    <dt>perspective</dt>
+      <dd>
+        <div class="playground">
+           <textarea>none</textarea>
+           <img src="img/2.png">
+          </div>
+         <div class="playground">
+           <textarea>perspective(400px) rotateX(45deg);</textarea>
+           <img src="img/2.png" class="perspective-1">
+         </div>
+         <div class="playground">
+           <textarea>perspective(100px) rotateX(45deg);</textarea>
+           <img src="img/2.png" class="perspective-3">
+         </div>
+         <div class="playground">
+           <textarea>perspective(400px) rotateY(45deg);</textarea>
+           <img src="img/2.png" class="perspective-2">
+         </div>
+       </dd>
+       <dd>Distance between the Z plane and the user to give a 3D perspective. The <i>vanishing point</i> is placed in the center by default, but can be changed using <strong>perspective-origin</strong></dd>
+       <dd>Applying a perspective to a parent element will give the same perspective point for all its children. See <a href="http://desandro.github.io/3dtransforms/examples/perspective-02-children.html">Parents and Perspective</a>
+       </dd>
+       <dd>
+         <dl>
+           <dt>perspective(length)</dt>
+           <dd>length is the distance measured away from Z plane</dd>
+           <dt>perspective-origin: % | position</dt>
+           <dd>lengths are ok. See <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/perspective-origin">Perspective-Origin Values</a></dd>
+        </dl>
+      </dd><a name="matrix" class="spacer"></a>
+    <dt>matrix</dt>
+      <dd>
+        <div class="playground">
+           <textarea>none</textarea>
+           <img src="img/3.png">
+          </div>
+         <div class="playground">
+           <textarea>matrix(1, 0, .6, 1, 0, 0);</textarea>
+           <img src="img/3.png" class="matrix-1">
+         </div>
+         <div class="playground">
+           <textarea>matrix(1, .5, .6, 1, 0, 0);</textarea>
+           <img src="img/3.png" class="matrix-2">
+         </div>
+         <div class="playground">
+           <textarea>matrix(1, .5, .6, -.5, 0, 0);</textarea>
+           <img src="img/3.png" class="matrix-3">
+         </div>
+       </dd>
+       <dd>Builds transformation matrix with translate values</dd>
+       <dd>
+         <dl>
+           <dt>matrix(a, b, c, d, tx, ty)</dt>
+           <dd>a: top-left , b: bottom-left , c: top-right , d: bottom-left , tx: translateX , ty: translateY</dd>
+           <dt>perspective-origin: % | position</dt>
+           <dd>lengths are ok. See <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/perspective-origin">Perspective-Origin Values</dd>
+        </dl>
+      </dd>
+  </dl>
+
+  <a name="transition"></a>
+  <h2>Transition</h2>
+  1. Single iteration <br/>
+  2. Requires CSS property being changed <br/>
+  3. Transition:all (could be bad for performance)<br/>
+  4. Best paired with javaScript </br>
+  <dl>
+    <dt>transition-delay</dt>
+      <dd>Configures delay before the transition occurs once activated</dd>
+    <dt>transition-duration</dt>
+      <dd>Configures how long the transition will happen until it achieves the new property</dd>
+    <dt>transition-property</dt>
+      <dd>Specifies which properties will be transitioned. The browser listens for the exact ones explicitly stated, unless 'all' is declared</dd>
+    <dt>transition-timing-function</dt>
+      <dd>Configures how the transition gets to the next value. Usually a curve in time</dd>
+  </dl>
+  <a name="animation"></a>
+  <h2>Animations</h2>
+  1. Infinite iterations<br/>
+  2. Doesn't require triggers <br/>
+  3. Multiple intermediate points <br/>
+  <dl>
+    <dt>animation-delay</dt>
+      <dd>Configures the delay between the time the element is loaded and the beginning of the animation sequence.</dd>
+      <dd>
+        <dl>
+          <dt>[ 3s ]</dt>
+            <dd>indicates seconds</dd>
+          <dt>[ 2s, 4ms ]</dt> 
+            <dd>2:04 seconds</dd>
+        </dl>
+      </dd>
+    <dt>animation-direction</dt>
+      <dd>Configures whether or not the animation should alternate direction on each run through the sequence or reset to the start point and repeat itself.</dd>
+      <dd>
+        <dl>
+          <dt>[ normal ]</dt>
+            <dd>plays normally</dd>
+          <dt>[ reverse ]</dt> 
+            <dd>plays backwards </dd>
+          <dt>[ alternate ]</dt>
+            <dd>alternates between forward and backward timing functions included</dd>
+          <dt>[ alternate-reverse ]</dt>
+            <dd>alternates starting with reversed</dd>
+        </dl>
+      </dd>
+    <dt>animation-duration</dt>
+      <dd>Configures the length of time that an animation should take to complete one cycle.</dd>
+      <dd>
+        <dl>
+          <dt>[ 6s ]</dt>
+            <dd>6 seconds</dd>
+          <dt>[ 120ms ]</dt> 
+            <dd>120 milliseconds</dd>
+        </dl>
+      </dd>
+    <dt>animation-iteration-count</dt>
+      <dd>Configures the number of times the animation should repeat; you can specify infinite to repeat the animation indefinitely.</dd>
+      <dd>
+        <dl>
+          <dt>[ infinite ]</dt>
+            <dd>plays foreverrrr</dd>
+          <dt>[ 3 ]</dt> 
+            <dd>repeats 3 times</dd>
+          <dt>[ 2.3 ]</dt>
+            <dd>repeats 2 times, then for .3 of a third iteration</dd>
+        </dl>
+      </dd>
+    <dt>animation-name</dt>
+      <dd>Specifies the name of the @keyframes at-rule describing the animation's keyframes.</dd>
+      <dd>
+        <dl>
+          <dt>[ none ]</dt>
+            <dd>used to deactivate an animation without changing order of the other identifiers</dd>
+          <dt>[ IDENT ]</dt> 
+            <dd>case-insensitive identifier(s) listed by commas.  </dd>
+          <dt>[ 2.3 ]</dt>
+            <dd>repeats 2 times, then for .3 of a third iteration</dd>
+        </dl>
+      </dd>
+    <dt>animation-play-state</dt>
+      <dd>Lets you pause and resume the animation sequence.</dd>
+      <dd><i>W3C is considering removing this property</i></dd>
+      <dd>
+        <dl>
+          <dt>[ running ]</dt>
+            <dd>animation is currently playing</dd>
+          <dt>[ paused ]</dt> 
+            <dd>animation is currently paused</dd>
+          <dt>[ paused, running, running ]</dt>
+            <dd>&nbsp; what does this mean?!</dd>
+        </dl>
+      </dd>
+    <dt>animation-timing-function</dt>
+      <dd>Configures the timing of the animation; that is, how the animation transitions through keyframes, by establishing acceleration curves.</dd>
+      <dd>See: <a href="http://cubic-bezier.com/#.17,.67,.83,.67" target="new">
+			Bezier Curve Comparison</a></dd>
+    <dt>animation-fill-mode</dt>
+      <dd>Configures what values are applied by the animation before and after it is executing.</dd>
+      <dd>
+        <dl>
+          <dt>[ none ]</dt>
+          <dd>Target will not apply any styles to the target before or after it is executing</dd>
+          <dt>[ forwards ]</dt>
+          <dd>Target will retain the computed values set by the last keyframe encountered during execution (retained during animation-delay)</dd>
+          <dt>[ backwards ]</dt>
+          <dd>The animation will apply values defined in the first relevant keyframe as soon as it is applied to the target (retained during animation-delay). 
+      </dd>
+  </dl>
+  
+</div>
+</body>
+</html>

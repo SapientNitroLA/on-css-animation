@@ -1,0 +1,204 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,300italic);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+
+/* Reset Styles
+***********************/
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed,figure, figcaption, footer, header, hgroup,menu, nav, output, ruby, section, summary,time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+
+body {
+	font-family: 'Lato', Times, serif;
+	color: #000;
+	font-size:95%;
+	background: #f9f9f9;
+}
+
+h2 {
+  font-size:130%;
+  border-left: 4px solid #0CCAA2;
+  padding-left:10px;
+  margin-left:-10px;
+}
+b {
+  font-weight:700;
+}
+
+i {
+  font-weight:200italic;
+}
+
+a {
+  font-weight:700;
+  color:#000;
+  text-decoration:none;
+}
+
+strong {
+  font-family:'Inconsolata', sans-serif;
+  margin: 0 4px;
+}
+
+textarea {
+  width:170px;
+  height:20px;
+  border:none;
+  background:#eee;
+  font-family:'Inconsolata', sans-serif;
+  text-align:center;
+}
+
+.nav ul {
+  position:fixed;
+  top:0;
+  left:23%;
+  width:50%;
+  background:#ddd;
+  border-top:3px solid #0CCAA2;  
+  z-index:10;
+}
+
+ol {
+  margin-left:15px;
+}
+ol a {
+  font-weight:normal;  
+}
+ol a:hover {
+  color: #0CCAA2;  
+}
+
+ul li {
+  display:inline-block;
+  text-align:center;
+  width:32.9%;
+}
+
+li a {
+  display:inline-block; 
+  padding:5px 0px;
+  width:100%; 
+  font-size:110%;
+}
+
+ul li:hover {
+  background:#aaa;
+}
+.spacer {
+  display:block;
+  padding-top:37px;
+}
+a.spacer:hover {
+  text-decoration:none;
+}
+
+
+
+
+.content {
+  margin-left:20px;
+  position:relative;
+}
+dl {
+  margin:20px 0px;
+}
+dt {
+  display:inline-block;
+  float:left;
+  font-weight:700;
+}
+dd {
+  padding-left:250px;
+  margin-bottom:10px;
+}
+dd a:hover {
+  border-bottom: 2px solid #0CCAA2;
+}
+
+
+
+
+
+div.playground {
+  overflow:hidden;
+  display:inline-block;
+  position:relative;
+  width:170px;
+  height:170px;
+  margin-right:20px;
+  margin-bottom:5px;
+  padding-top:5px;
+  font-size:70%;
+  text-align:center;
+  background:#eee;
+  border:1px dashed #ddd;
+}
+
+div.playground img {
+  margin-top:10px;
+}
+
+img.translate-1 {
+  -webkit-transform:translate(12px, 50%);
+}
+img.translate-2 {
+  -webkit-transform:translateX(40px);
+}
+img.translate-3 {
+  -webkit-transform:translateY(60px);
+}
+
+img.skew-1 {
+  -webkit-transform:skew(5deg,-10deg);
+}
+img.skew-2 {
+  -webkit-transform:skewX(10deg);
+}
+img.skew-3 {
+  -webkit-transform:skewY(10deg);
+}
+
+img.scale-1 {
+  -webkit-transform:scale(.3, 1.15);
+}
+img.scale-2 {
+  -webkit-transform:scaleX(2);
+}
+img.scale-3 {
+  -webkit-transform:scaleY(.5);
+}
+
+img.rotate-1 {
+  -webkit-transform:rotate(15deg);
+}
+
+img.perspective-1 {
+  -webkit-transform: perspective(400px) rotateX(45deg);  
+}
+img.perspective-2 {
+  -webkit-transform: perspective(400px) rotateY(45deg);  
+}
+img.perspective-3 {
+  -webkit-transform: perspective(100px) rotateX(45deg);  
+}
+
+img.matrix-1 {
+  -webkit-transform: matrix(1, 0, .6, 1, 0, 0);  
+}
+img.matrix-2 {
+  -webkit-transform: matrix(1, .5, .6, 1, 0, 0);  
+}
+img.matrix-3 {
+  -webkit-transform: matrix(1, .5, .6, -.5, 0, 0);  
+}
+
+
+
+
+
+
