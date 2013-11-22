@@ -8,6 +8,6 @@ This repo contains a presentation, as well as a compiled project demonstration o
 
 **index.html** consists of the presentation itself (using [MarkdownPresenter][presenter])
 
-**examples.html** consists of a glossary of Transition/Transform/Animation features in CSS3
+**examples.html** consists of a glossary of Transition/Transform/Animation features in CSS3. Most of the material is compiled from MDN's pages on animations, transitions, transforms. 
 
 [presenter]: https://github.com/chrishulbert/MarkdownPresenter
