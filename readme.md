@@ -1,13 +1,45 @@
-# On Css Animations #
+# On Css Animations
 
-A simple presentation on getting started with CSS Animations & Transitions
+A simple presentation & project demonstration on getting started with CSS Animations & Transitions
 
-## About ##
+## Presentation
 
-This repo contains a presentation, as well as a compiled project demonstration on CSS Animations. It breaks down CSS Animations & Transitions into two separate entities, Effect & Act. 
+[Located Here](http://sapientnitrola.github.io/on-css-animation/#1)
 
-**index.html** consists of the presentation itself (using [MarkdownPresenter][presenter])
+This presentation breaks down animations into two entities: Effect & Act. This enables us to separate the different aspects of transformations in CSS, with the movement associated with Animations. The presentation is built in markdown and compiled visually with [MarkdownPresenter][presenter].
 
-**examples.html** consists of a glossary of Transition/Transform/Animation features in CSS3. Most of the material is compiled from MDN's pages on animations, transitions, transforms. 
+### Effect
+
+The Effect covers *what* is being changed
+
++ CSS Properties
++ Transform
++ Keyframes
+
+### Act
+
+The Act covers *how* it is being changed
+
++ Transition
++ Animation
+
+## Project ##
+
+[Located Here](http://sapientnitrola.github.io/on-css-animation/examples.html)
+
+The project consists of a glossary of values and properties for Transitions, Transforms, and Animations featured in CSS3. Information comes from various sources including but not limited to [MDN][mdn], [CSS-Tricks][csstricks]...
+
+### Helpful Project Links
+
+[Bezier Curve][bc]
+[transit.js](http://ricostacruz.com/jquery.transit/)
+[animate.css](https://daneden.me/animate/)
+[easing.js](http://gsgd.co.uk/sandbox/jquery/easing/)
+
+
+
 
 [presenter]: https://github.com/chrishulbert/MarkdownPresenter
+[mdn]: https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_CSS_animations
+[csstricks]: http://css-tricks.com/almanac/properties
+[bc]: http://cubic-bezier.com/#.17,.67,.83,.67

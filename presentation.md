@@ -318,7 +318,7 @@ Transition/Animation Details
 
 Comparison [here](http://cubic-bezier.com/#.17,.67,.83,.67)
 
-Easings Grapihcs [here](http://easings.net/)
+Easings Graphics [here](http://easings.net/)
 
 !
 
@@ -353,7 +353,7 @@ Specifying Properties
 ---
 * **Transitions** tell the browser what to watch for, explicitly
 * <code>transition: all </code> is the only exception, but it gives you a performance hit.
-* **Animations** something
+* **Animations** 
 
 !
 
@@ -385,12 +385,12 @@ JS
 
 Animation Event Listeners
 ---
-* animationstart
-* animationiteration
-* animationend
++ animationstart
++ animationiteration
++ animationend
 
 <code>
-
+  
     .foo { animation: foo 1s; }
     .bar { animation: bar 1s; }
     
@@ -421,4 +421,3 @@ Animation Resources
 
 !
 
-YAY
