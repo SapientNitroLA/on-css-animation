@@ -55,7 +55,7 @@ if (!window.jQuery) {
 <script>
 var Present = { };
 
-Present.slideRegEx = /^<p>(!SLIDE|!)<\/p>$/i;
+Present.slideRegEx = /<p>(!SLIDE|!)<\/p>/i;
 
 Present.hashToSlideIndex = function () {
     var matches = window.location.hash.match(/#(\d+)/);
@@ -114,6 +114,7 @@ Present.reload = function() {
                 converter = new Showdown.converter();
                 var converted = converter.makeHtml(data);
                 Present.slides = converted.split(Present.slideRegEx);
+                console.log(Present.slides);
                 Present.buildSlideCounter();
                 Present.showSlide(Present.currentSlide);
 

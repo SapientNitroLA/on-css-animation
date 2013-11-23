@@ -19,7 +19,7 @@ Two Aspects
   1. Transition
   2. Animation
   
-!
+!SLIDE
 
 The Effect
 ---
@@ -33,12 +33,12 @@ Modify the coordinate space, visually
 * **Keyframes:**
 A series of properties declared based on timing
 
-!
+!SLIDE
 
 Transforms in Detail
 ===
 
-!
+!SLIDE
 
 Options
 ---
