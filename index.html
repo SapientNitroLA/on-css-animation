@@ -55,7 +55,7 @@ if (!window.jQuery) {
 <script>
 var Present = { };
 
-Present.slideRegEx = /<p>(!SLIDE|!)<\/p>/i;
+Present.slideRegEx = /<p>(?:!SLIDE|!)<\/p>/i;
 
 Present.hashToSlideIndex = function () {
     var matches = window.location.hash.match(/#(\d+)/);
