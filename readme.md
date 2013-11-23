@@ -29,14 +29,12 @@ The Act covers *how* it is being changed
 
 The project consists of a glossary of values and properties for Transitions, Transforms, and Animations featured in CSS3. Information comes from various sources including but not limited to [MDN][mdn], [CSS-Tricks][csstricks]...
 
-### Helpful Project Links
+### Project Links
 
-[Bezier Curve][bc]
-[transit.js](http://ricostacruz.com/jquery.transit/)
-[animate.css](https://daneden.me/animate/)
-[easing.js](http://gsgd.co.uk/sandbox/jquery/easing/)
-
-
+[Bezier Curve][bc]  
+[Transit.js](http://ricostacruz.com/jquery.transit/)  
+[Animate.css](https://daneden.me/animate/)  
+[Easing.js](http://gsgd.co.uk/sandbox/jquery/easing/)  
 
 
 [presenter]: https://github.com/chrishulbert/MarkdownPresenter

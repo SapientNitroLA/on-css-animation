@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1" />
-<title>Markdown Presenter</title>
+<title>On Css Animations</title>
 <!-- <link href='http://fonts.googleapis.com/css?family=Istok+Web' rel='stylesheet' type='text/css'> -->
 <link rel="stylesheet" href="css/presentation.css" type="text/css" media="screen" charset="utf-8">
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
@@ -54,6 +54,8 @@ if (!window.jQuery) {
 
 <script>
 var Present = { };
+
+Present.slideRegEx = /^<p>(!SLIDE|!)<\/p>$/i;
 
 Present.hashToSlideIndex = function () {
     var matches = window.location.hash.match(/#(\d+)/);
@@ -111,7 +113,7 @@ Present.reload = function() {
             if (data.length>0) {
                 converter = new Showdown.converter();
                 var converted = converter.makeHtml(data);
-                Present.slides = converted.split('<p>!</p>');
+                Present.slides = converted.split(Present.slideRegEx);
                 Present.buildSlideCounter();
                 Present.showSlide(Present.currentSlide);
 

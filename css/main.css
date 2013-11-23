@@ -96,10 +96,6 @@ ul li:hover {
 a.spacer:hover {
   text-decoration:none;
 }
-
-
-
-
 .content {
   margin-left:20px;
   position:relative;
@@ -119,11 +115,6 @@ dd {
 dd a:hover {
   border-bottom: 2px solid #0CCAA2;
 }
-
-
-
-
-
 div.playground {
   overflow:hidden;
   display:inline-block;
@@ -138,7 +129,6 @@ div.playground {
   background:#eee;
   border:1px dashed #ddd;
 }
-
 div.playground img {
   margin-top:10px;
 }

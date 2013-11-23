@@ -1,9 +1,9 @@
 CSS Animations
 ===
 
-by val-ray
+Valerie Balcom
 
-!
+!SLIDE
 
 Two Aspects
 ---
@@ -32,7 +32,6 @@ Modify the coordinate space, visually
 
 * **Keyframes:**
 A series of properties declared based on timing
-
 
 !
 
@@ -68,7 +67,7 @@ Just to give you an idea of how many transform properties there are...
     transform: perspective(17px)
     transform: translateX(10px) rotate(10deg) translateY(5px)
 
-!
+!SLIDE
 
 A little TL;DR
 ---
@@ -83,7 +82,7 @@ A little TL;DR
 
 [transform properties and examples of uses](index.html#transform)
 
-!
+!SLIDE
 
 Transform: Structure
 ---
@@ -96,7 +95,7 @@ examples:
     transform: rotateX(10deg)
     transform: translate(12px, 50%)
 
-!
+!SLIDE
 
 Transform: Stacking/Chaining
 ---
@@ -110,7 +109,7 @@ Will only move the element. To do both, you need to chain them -
 
 The **order & inheritance** matters as well.
 
-!
+!SLIDE
 
 Transform: Perspective
 ---
@@ -119,7 +118,7 @@ Applies a vanishing point which can be adjusted by changing the origin.
 ![perspective1](img/perspective1.png)
 ![perspective2](img/perspective2.png)
 
-!
+!SLIDE
 
 Stacking Transform ( Children )
 ---
@@ -131,7 +130,7 @@ Stacking Transform ( Children )
 
 ![red](img/red.png)
 
-!
+!SLIDE
 
 Stacking Transform ( Parent )
 ---
@@ -146,12 +145,12 @@ Stacking Transform ( Parent )
 
 ![blue](img/blue.png)
 
-!
+!SLIDE
 
 Keyframes in Detail
 ===
 
-!
+!SLIDE
 
 Keyframes: Structure
 ---
@@ -170,7 +169,7 @@ Keyframes: Structure
       }
     }
 
-!
+!SLIDE
 
 Keyframes: Notes
 ---
@@ -178,7 +177,7 @@ Keyframes: Notes
 * **%:** a percentage value that defines the state of the animation at that point
 * **animation-timing-function:** can be overwritten in a keyframe
 
-!
+!SLIDE
 
 Helpful (sometimes buggy) Properties
 ---
@@ -191,12 +190,12 @@ Not animateable, but gives an element a backface, [here](http://css-tricks.com/a
 
 Determines if children are positioned in 3D space (or flat) [here](http://css-tricks.com/almanac/properties/t/transform-style/)
 
-!
+!SLIDE
 
 The Act
 ===
 
-!
+!SLIDE
 
 Transitions & Animations
 ---
@@ -211,7 +210,7 @@ One or more property changes associated with a timing property
 * **Animation:**
 A series of animations in various possible sequences
   
-!
+!SLIDE
 
 Transitions
 ---
@@ -224,7 +223,7 @@ Transitions
         background-color: #000;
     }
 
-!
+!SLIDE
 
 Transitions
 ---
@@ -241,7 +240,7 @@ Transitions
 
 </code>
 
-!
+!SLIDE
 
 Transition: sub properties
 ---
@@ -256,7 +255,7 @@ How long to wait before a property is changed
 
 Details [here](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_CSS_transitions?redirectlocale=en-US&redirectslug=CSS%2FTutorials%2FUsing_CSS_transitions)
 
-!
+!SLIDE
 
 Animation
 ---
@@ -271,7 +270,7 @@ Animation
       to { transform:scale(1,1); }
     }
 
-!
+!SLIDE
 
 Animation
 ---
@@ -287,7 +286,7 @@ Animation
     animation: blink 4s linear infinite
 </code>
 
-!
+!SLIDE
 
 Animation: sub properties
 ---
@@ -302,7 +301,7 @@ Animation: sub properties
 
 Details [here](index.html#animation)
 
-!
+!SLIDE
 
 Animation: fill-mode
 ---
@@ -310,7 +309,7 @@ Defines the styles of the animated element before and/or after the animation exe
 
 Backwards takes the first keyframe and applies it before the animation runs. 
 
-!
+!SLIDE
 
 Transition/Animation Details
 ---
@@ -320,12 +319,12 @@ Comparison [here](http://cubic-bezier.com/#.17,.67,.83,.67)
 
 Easings Graphics [here](http://easings.net/)
 
-!
+!SLIDE
 
 Choosing the Act
 ===
 
-!
+!SLIDE
 
 Triggering
 ---
@@ -333,21 +332,21 @@ Triggering
 * **Transition** is commonly triggered by JavaScript by adding and removing classes
 * **Animations** start automatically
 
-!
+!SLIDE
 
 Looping
 ---
 * **Transitions** can essentially only happen once
 * **Animations** can have a set number of iterations, or go infinitely
 
-!
+!SLIDE
 
 Intermediate Points/Keyframes
 ---
 * **Transitions** only establish the end result
 * **Animations** can dart all across the board
 
-!
+!SLIDE
 
 Specifying Properties
 ---
@@ -355,7 +354,7 @@ Specifying Properties
 * <code>transition: all </code> is the only exception, but it gives you a performance hit.
 * **Animations** 
 
-!
+!SLIDE
 
 JavaScript Interaction
 ---
@@ -364,7 +363,7 @@ JavaScript Interaction
 * As long as the property changes, the transition will happen.
 * Animation can be accessed via <code>AnimationEvent</code> but has limited support: [here](https://developer.mozilla.org/en-US/docs/Web/API/AnimationEvent?redirectlocale=en-US&redirectslug=DOM%2FAnimationEvent)
 
-!
+!SLIDE
 
 Html
 
@@ -381,7 +380,7 @@ JS
     var myElement = document.querySelectr("#myElement");
     myElement.style.backgroundColor = "333";    
 
-!
+!SLIDE
 
 Animation Event Listeners
 ---
@@ -400,7 +399,7 @@ Animation Event Listeners
     });
 </code>
 
-!
+!SLIDE
 
 **Act** - Summary
 ---
@@ -408,7 +407,7 @@ Animation Event Listeners
 * If I am looking for a simple to/from animation, I go with a **transition**
 * If I want to manipulate the property values that I wish to animate using JavaScript, I go with a **transition**
 
-!
+!SLIDE
 
 Animation Resources
 ---
@@ -419,5 +418,4 @@ Animation Resources
 
 [easing.js](http://gsgd.co.uk/sandbox/jquery/easing/)
 
-!
-
+!SLIDE
