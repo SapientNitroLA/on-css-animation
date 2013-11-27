@@ -64,6 +64,7 @@ textarea {
 }
 
 ol {
+  margin-top:10px;
   margin-left:15px;
 }
 ol a {
@@ -72,7 +73,12 @@ ol a {
 ol a:hover {
   color: #0CCAA2;  
 }
-
+ol li {
+  text-align:center;
+  display:inline-block;
+  width:100px;
+  background:#eee;
+}
 ul li {
   display:inline-block;
   text-align:center;
@@ -91,7 +97,8 @@ ul li:hover {
 }
 .spacer {
   display:block;
-  padding-top:37px;
+  padding-bottom:17px;
+  padding-top:17px;
 }
 a.spacer:hover {
   text-decoration:none;
