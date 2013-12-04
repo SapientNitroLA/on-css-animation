@@ -4,7 +4,8 @@
 		<title>CSS Transitions and Animations</title>
 	
 	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
-	
+  <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+  
 </head>
 <body>
 <div class="nav">
@@ -37,19 +38,19 @@
     <dt>transform: translate()</dt>
       <dd>
         <div class="playground">
-          <textarea>none</textarea>
+          <p>none</p>
           <img src="img/1.png">
         </div>
-        <div class="playground">
-          <textarea>translate:(12px, 50%);</textarea>
+        <div class="playground translate">
+          <p>translate(<textarea>12px</textarea>, <textarea>50%</textarea>)</p>
           <img src="img/1.png" class="translate-1">
         </div>
-        <div class="playground">
-          <textarea>translateX(40px);</textarea>
+        <div class="playground translateX">
+          <p>translateX(<textarea>40px</textarea>)</p>
           <img src="img/1.png" class="translate-2">
         </div>
-        <div class="playground">
-          <textarea>translateY(60px);</textarea>
+        <div class="playground translateY">
+          <p>translateY(<textarea>60px</textarea>)</p>
           <img src="img/1.png" class="translate-3">
         </div>
       </dd>
@@ -67,19 +68,19 @@
     <dt>transform: skew()</dt>
       <dd>
         <div class="playground">
-          <textarea>none</textarea>
+          <p>none</p>
           <img src="img/2.png">
         </div>
         <div class="playground">
-          <textarea>skew(5deg, -10deg)</textarea>
+          <p>skew(<textarea>5deg</textarea>, <textarea>10deg</textarea>)</p>
           <img src="img/2.png" class="skew-1">
         </div>
         <div class="playground">
-          <textarea>skewX(10deg);</textarea>
+          <p>skewX(<textarea>10deg</textarea>)</p>
           <img src="img/2.png" class="skew-2">
         </div>
         <div class="playground">
-          <textarea>skewY(10deg);</textarea>
+          <p>skewY(<textarea>10deg</textarea>)</p>
           <img src="img/2.png" class="skew-3">
         </div>
       </dd>
@@ -97,19 +98,19 @@
     <dt>transform: scale()</dt>
       <dd>
         <div class="playground">
-           <textarea>none</textarea>
+           <p>none</p>
            <img src="img/3.png">
           </div>
          <div class="playground">
-           <textarea>scale(.3, 1.15);</textarea>
+           <p>scale(<textarea>.3</textarea>, <textarea>1.15</textarea>)</p>
            <img src="img/3.png" class="scale-1">
          </div>
          <div class="playground">
-           <textarea>scaleX(2);</textarea>
+           <p>scaleX(<textarea>2</textarea>)</p>
             <img src="img/3.png" class="scale-2">
          </div>
          <div class="playground">
-           <textarea>scaleY(.5);</textarea>
+           <p>scaleY(<textarea>.5</textarea>)</p>
           <img src="img/3.png" class="scale-3">
          </div>
        </dd>
@@ -127,11 +128,11 @@
     <dt>transform: rotate()</dt>
       <dd>
         <div class="playground">
-           <textarea>none</textarea>
+           <p>none</p>
            <img src="img/1.png">
           </div>
          <div class="playground">
-           <textarea>rotate(15deg);</textarea>
+           <p>rotate(<textarea>15deg</textarea>)</p>
            <img src="img/1.png" class="rotate-1">
          </div>
        </dd>
@@ -145,21 +146,22 @@
     <dt>transform: perspective()</dt>
       <dd>
         <div class="playground">
-           <textarea>none</textarea>
+           <p>none</p>
            <img src="img/2.png">
           </div>
          <div class="playground">
-           <textarea>perspective(400px) rotateX(45deg);</textarea>
+           <p>perspective(<textarea>400px</textarea>) rotateX(45deg)</p>
            <img src="img/2.png" class="perspective-1">
          </div>
          <div class="playground">
-           <textarea>perspective(100px) rotateX(45deg);</textarea>
-           <img src="img/2.png" class="perspective-3">
-         </div>
-         <div class="playground">
-           <textarea>perspective(400px) rotateY(45deg);</textarea>
+           <p>perspective(400px) rotateX(<textarea>45deg</textarea>)</p>
            <img src="img/2.png" class="perspective-2">
          </div>
+         <div class="playground">
+           <p>perspective(<textarea>400px</textarea>) rotateY(45deg)</p>
+           <img src="img/2.png" class="perspective-3">
+         </div>
+         
        </dd>
        <dd>Distance between the Z plane and the user to give a 3D perspective. The <i>vanishing point</i> is placed in the center by default, but can be changed using <strong>perspective-origin</strong></dd>
        <dd>Applying a perspective to a parent element will give the same perspective point for all its children. See <a href="http://desandro.github.io/3dtransforms/examples/perspective-02-children.html">Parents and Perspective</a>
@@ -175,21 +177,18 @@
     <dt>transform: matrix()</dt>
       <dd>
         <div class="playground">
-           <textarea>none</textarea>
-           <img src="img/3.png">
+          <p>none</p>
+          <img src="img/3.png">
+        </div>
+        <div class="playground triple">
+          <p>matrix(<textarea>1</textarea>,
+            <textarea>0</textarea>, 
+            <textarea>.6</textarea>, 
+            <textarea>1</textarea>, 
+            <textarea>0</textarea>, 
+            <textarea>0</textarea>)</p>
+            <img src="img/3.png" class="matrix-1">
           </div>
-         <div class="playground">
-           <textarea>matrix(1, 0, .6, 1, 0, 0);</textarea>
-           <img src="img/3.png" class="matrix-1">
-         </div>
-         <div class="playground">
-           <textarea>matrix(1, .5, .6, 1, 0, 0);</textarea>
-           <img src="img/3.png" class="matrix-2">
-         </div>
-         <div class="playground">
-           <textarea>matrix(1, .5, .6, -.5, 0, 0);</textarea>
-           <img src="img/3.png" class="matrix-3">
-         </div>
        </dd>
        <dd>Builds transformation matrix with translate values</dd>
        <dd>
@@ -313,5 +312,6 @@
   </dl>
   
 </div>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

@@ -44,13 +44,24 @@ strong {
   margin: 0 4px;
 }
 
+p {
+  vertical-align:top;
+  font-family:'Inconsolata', sans-serif;
+  padding-top:5px;
+}
 textarea {
-  width:170px;
-  height:20px;
+/*  width:170px;*/
+  display:inline-block;
+  width:35px;
+  height:12px;
   border:none;
-  background:#eee;
+  background:#fff;
   font-family:'Inconsolata', sans-serif;
   text-align:center;
+  margin:-3px 5px 5px 5px;
+  padding-top:3px;  
+  resize:none;
+  border:1px solid #aaa;
 }
 
 .nav ul {
@@ -139,6 +150,9 @@ div.playground {
 div.playground img {
   margin-top:10px;
 }
+div.playground.triple {
+  width:550px;
+}
 
 img.translate-1 {
   -webkit-transform:translate(12px, 50%);
@@ -178,10 +192,10 @@ img.perspective-1 {
   -webkit-transform: perspective(400px) rotateX(45deg);  
 }
 img.perspective-2 {
-  -webkit-transform: perspective(400px) rotateY(45deg);  
+  -webkit-transform: perspective(100px) rotateX(45deg);  
 }
 img.perspective-3 {
-  -webkit-transform: perspective(100px) rotateX(45deg);  
+  -webkit-transform: perspective(400px) rotateY(45deg);  
 }
 
 img.matrix-1 {
