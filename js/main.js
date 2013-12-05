@@ -23,44 +23,61 @@
                 , classList = square.attr('class').split(' ')
                 , transform = classList[1];                     //type of transform
                 ;
+                
+            // console.log(textarea);
             
             // validate, then change
             if ( this.validateValues( transform, value ) ) {
+                console.log(true, value);
+                
+                currentTarget.removeClass('red');
                 
                 this.changeValues( image, transform, value );
-            }            
+            }
+            else {
+                console.log(false, value);
+                //change color
+                currentTarget.addClass('red');
+            }
         },
         
         changeValues: function( image, transform, value ) {
             
+            console.log(image);
+            image.css({"transform:": transform + "(" + value +")"});
             
-            
-            return true;
         },
         
         validateValues: function( transform, value ) {
-            var regex;
+            
+            var isTranslate = /translate(X|Y)?/
+                , isSkew = /skew(X|Y)?/
+                , isRotate = /rotate(X|Y)?/
+                , isScale = /scale(X|Y)?/
+                , lengthOrPercent = /^-?\d+(%|px|em|pc|in|mm|deg)$/
+                , lengthOnly = /^-?\d+(px|em|pc|in|mm|deg)$/
+                , angleDeg = /^-?\d+(deg)$/
+                , unitlessDigit = /^\d*\.?\d+$/
+                ;
             
             // translate: length or %
-            if( transform === 'translate' ) {
-                regex = '(\-)?\d+(\%|px|em|pc|in|mm|deg)';
-                
-                console.log('transform!');
+            if( isTranslate.test( transform ) ) {
+                if( lengthOrPercent.test( value ) ) return true;                
             }
             // skew + rotate: deg + angle
-            if( transform === 'skew' | 'rotate') {
-                regex = '(\-)?\d+(deg)';
+            if( isSkew.test( transform ) || isRotate.test( transform ) ) {
+                if( angleDeg.test( value ) ) return true;                
             }
-            
             // scale: unitless #
-            if( transform === 'scale' ) {
-                regex = '\d*\.?\d+';
+            if( isScale.test( transform ) || transform === 'matrix') {
+                if( unitlessDigit.test( value ) ) return true;                
             }
             // perspective: length
             if ( transform === 'perspective' ){
-                regex = '(\-)?\d+(px|em|pc|in|mm|deg)';
+                if( lengthOnly.test( value ) ) return true;
             }
             
+            return false;
         }
     };
     

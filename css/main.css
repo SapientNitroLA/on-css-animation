@@ -64,6 +64,11 @@ textarea {
   border:1px solid #aaa;
 }
 
+textarea.red {
+  color:red;
+  border:1px solid red;
+}
+
 .nav ul {
   position:fixed;
   top:0;
