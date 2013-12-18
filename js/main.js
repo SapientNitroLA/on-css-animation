@@ -41,12 +41,10 @@
             
         },
         
-        findMatrixValues: function( e ) {
+        findMatrixValues: function() {
             
-            // console.log($(this).index());
+            //TODO: Matrix Playground
             
-            // console.log($(matrix).index());
-            // console.log(matrix.index());
         },
         
         findValues: function( textarea ) {
@@ -77,21 +75,11 @@
                 this.changeValues();
             }
             else {
-                // console.log(false, value);
+                
                 //change color
                 currentTarget.addClass('red');
             }
         },
-        
-        // createTransformObj: function( currentTarget, square, image, transform, value ) {
-        //     
-        //     transformObj.name = transform;
-        //     transformObj.image = image;
-        //     transformObj.value = value;
-        //     
-        //     //index + text area values!
-        //     
-        // },
         
         changeValues: function() {
             
@@ -103,44 +91,26 @@
                 ;
                 
             if( isOneValue.test( transformVal ) || transformVal === 'perspective' ) {
-                console.log('is one value');
+
                 transformObj.image.css({transform: transformVal + "(" + value + ")"});
             }
             else if( transformVal === 'perspectiveX' ) {
-                //could be rotate insteaed of perspective
+                //TODO: perspective
             }
             else if( transformVal === 'matrix' ) {
-                //well crap
+                //TODO: matrix
             }
             else {
-                console.log('else');
                 // var val1, val2;
                 // it is either first or second value of a non X|Y transform
                 // if( transformVal.index === 0 ) {
                 transformString = transformVal + "("+ transformObj.valueArray[0] + ", " + transformObj.valueArray[1] +")";
-                
-                console.log(transformString);
-                    
+                                    
                 image.css({
-                    -webkit-transform: transformString });
-
-
-                
-                // image.css({transform: transformVal + "("+ val1 + ", " + val2 +")"});
-                // if( !textarea.lastElementChild ) {
-                //     console.log('there is a last element child');
-                //     //its the first value area 
-                //     image.css({transform: transformVal + "X(" + value + ")"});
-                // }
-                // else {
-                //     //its the second value area
-                //     image.css({transform: transformVal + "Y(" + value + ")"});
-                // }
+                    transform: transformString });
+                    
             }
             
-            // console.log(textarea);
-            // console.log(transformVal+"("+value+")");
-            // image.css({-webkit-transform: transform + "(" + value +")"});
             image.css({transform: transformVal + "(" + value +")"});
             
         },
